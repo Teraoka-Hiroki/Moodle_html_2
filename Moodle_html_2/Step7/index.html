@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>どこでもアプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>どこでもアプリ</h1>
+      <p>さあ、今日はどこへ旅に出かけますか？</p>
+    </header>
+
+    <main>
+      <div class="search-box">
+        <!-- formタグ: 入力と送信ボタンをグループ化 -->
+        <form id="searchForm">
+          <input type="text" id="locationInput" placeholder="例: 東京タワー、パリ" required>
+          <button type="submit">ストリートビューを表示</button>
+        </form>
+      </div>
+
+      <div class="streetview-container">
+        <!-- iframeタグ: この中に別のウェブページを埋め込むことができる -->
+        <!-- 最初は空っぽにしておき、JavaScriptで表示する場所を指定する -->
+        <iframe id="streetViewIframe" src="" allowfullscreen></iframe>
+      </div>
+    </main>
+  </div>
+  <script src="travel.js"></script>
+</body>
+</html>

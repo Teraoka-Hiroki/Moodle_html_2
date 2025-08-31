@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードをUTF-8に設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- レスポンシブ対応 -->
+    <title>ToDoリスト</title> <!-- ページタイトル -->
+    <link rel="stylesheet" href="style.css"> <!-- 外部CSSファイルの読み込み -->
+</head>
+<body>
+
+    <div class="container"> <!-- 全体を囲むコンテナ -->
+        <h1>ToDoリスト</h1> <!-- ページ見出し -->
+
+        <div class="input-area"> <!-- タスク入力エリア -->
+            <input type="text" id="task-input" placeholder="タスクを入力してください"> <!-- タスク入力欄 -->
+            <button id="add-button">追加</button> <!-- タスク追加ボタン -->
+        </div>
+
+        <div class="control-buttons"> <!-- タスク操作用ボタンエリア -->
+            <button id="complete-button">完了</button> <!-- タスク完了ボタン -->
+            <button id="delete-button">削除</button> <!-- タスク削除ボタン -->
+        </div>
+
+        <ul id="task-list">
+            <!-- ここにタスクが追加されます -->
+        </ul> <!-- タスクリスト表示エリア -->
+    </div>
+
+    <script src="todo_list.js"></script> <!-- JavaScriptファイルの読み込み -->
+</body>
+</html>

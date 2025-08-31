@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f8f7; /* 少し緑がかった白 */
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto; /* 中央揃えのテクニック */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    text-align: center; /* 中の要素を中央揃えに */
+    border-bottom: 1px solid #e0e0e0; /* 下に境界線 */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    max-width: 100%; /* 親要素の幅に合わせて画像の最大幅を調整 */
+    height: auto; /* 高さは自動で調整 */
+    border-radius: 10px;
+}
+
+.diary-form {
+    display: flex; /* Flexboxを有効に */
+    flex-direction: column; /* 子要素を縦に並べる */
+    gap: 15px; /* 要素間の隙間を15pxに */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* paddingを含めてwidthを100%にする */
+}
+
+#displayArea {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    display: none; /* 初期状態では非表示にする */
+}
+
+/* visibleクラスがついた時に表示する */
+#displayArea.visible {
+    display: block;
+}

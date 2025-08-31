@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3行日記アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>3行日記</h1>
+            <p>今日あった良かったことを3つ記録しましょう</p>
+            <img src="sample.png" alt="リラックスできる画像" class="header-image">
+        </header>
+
+        <main>
+            <div class="controls">
+                <button id="startButton">開始</button>
+            </div>
+
+            <div class="datetime-display">
+                <p>日時: <span id="datetime"></span></p>
+            </div>
+
+            <div class="diary-form">
+                <textarea id="goodThing1" placeholder="1. 良かったこと" rows="2"></textarea>
+                <textarea id="goodThing2" placeholder="2. 良かったこと" rows="2"></textarea>
+                <textarea id="goodThing3" placeholder="3. 良かったこと" rows="2"></textarea>
+                <button id="postButton">投稿</button>
+            </div>
+
+            <div id="displayArea">
+                <h2>今日の記録</h2>
+                <div id="postedContent">
+                    <!-- 投稿内容がここに表示されます -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="treegood.js"></script>
+</body>
+</html>

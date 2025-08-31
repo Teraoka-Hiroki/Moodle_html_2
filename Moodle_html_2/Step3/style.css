@@ -1,0 +1,160 @@
+/* =========================
+   基本的なスタイル設定
+   ========================= */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* システムフォントを優先的に使用 */
+    background-color: #f4f4f4; /* 背景色を薄いグレーに設定 */
+    color: #333; /* 文字色を濃いグレーに設定 */
+    line-height: 1.6; /* 行間を少し広めに */
+    display: flex; /* Flexboxで中央寄せ */
+    justify-content: center; /* 横方向中央寄せ */
+    align-items: center; /* 縦方向中央寄せ */
+    height: 100vh; /* 画面全体の高さを使用 */
+    margin: 0; /* デフォルトの余白を削除 */
+}
+
+.container {
+    background: #AAA; /* コンテナの背景色をグレーに */
+    padding: 2rem; /* 内側の余白 */
+    border-radius: 8px; /* 角を丸く */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影をつけて浮き上がらせる */
+    width: 100%; /* 幅を100%に */
+    max-width: 500px; /* 最大幅を500pxに制限 */
+}
+
+h1 {
+    text-align: center; /* 見出しを中央寄せ */
+    color: #555; /* 見出しの色をやや薄めに */
+    margin-bottom: 1.5rem; /* 下に余白 */
+}
+
+/* =========================
+   入力エリアのスタイル
+   ========================= */
+.input-area {
+    display: flex; /* 横並びに配置 */
+    gap: 0.5rem; /* 要素間の隙間 */
+    margin-bottom: 1rem; /* 下に余白 */
+}
+
+#task-input {
+    flex-grow: 1; /* 入力欄をできるだけ広げる */
+    padding: 0.7rem; /* 内側の余白 */
+    border: 1px solid #ddd; /* 枠線を薄く */
+    border-radius: 4px; /* 角を丸く */
+    font-size: 1rem; /* 文字サイズ */
+}
+
+#task-input:focus {
+    outline: none; /* フォーカス時の枠線を消す */
+    border-color: #007bff; /* フォーカス時の枠線色を青に */
+}
+
+/* =========================
+   ボタンの共通スタイル
+   ========================= */
+button {
+    padding: 0.7rem 1rem; /* 上下左右の余白 */
+    border: none; /* 枠線なし */
+    border-radius: 4px; /* 角を丸く */
+    cursor: pointer; /* カーソルをポインターに */
+    font-size: 1rem; /* 文字サイズ */
+    color: #fff; /* 文字色を白に */
+    transition: background-color 0.3s; /* 背景色の変化を滑らかに */
+}
+
+/* 追加ボタンのスタイル */
+#add-button {
+    background-color: #007bff; /* 青色 */
+}
+#add-button:hover {
+    background-color: #0056b3; /* ホバー時に濃い青に */
+}
+
+/* 操作ボタンエリアのスタイル */
+.control-buttons {
+    display: flex; /* 横並び */
+    gap: 0.5rem; /* ボタン間の隙間 */
+    margin-bottom: 1.5rem; /* 下に余白 */
+}
+
+/* 完了ボタンのスタイル */
+#complete-button {
+    background-color: #28a745; /* 緑色 */
+}
+#complete-button:hover {
+    background-color: #218838; /* ホバー時に濃い緑に */
+}
+
+/* 削除ボタンのスタイル */
+#delete-button {
+    background-color: #dc3545; /* 赤色 */
+}
+#delete-button:hover {
+    background-color: #c82333; /* ホバー時に濃い赤に */
+}
+
+/* =========================
+   タスクリストのスタイル
+   ========================= */
+#task-list {
+    list-style: none; /* リストマーカーを消す */
+    padding: 0; /* パディングなし */
+    margin: 0; /* マージンなし */
+}
+
+#task-list li {
+    display: flex; /* 横並び */
+    align-items: center; /* 縦方向中央揃え */
+    padding: 0.8rem; /* 内側の余白 */
+    background: #f9f9f9; /* 背景色を薄いグレーに */
+    border-bottom: 1px solid #eee; /* 下に薄い線 */
+    transition: background-color 0.2s; /* 背景色の変化を滑らかに */
+}
+
+#task-list li:last-child {
+    border-bottom: none; /* 最後の要素は下線を消す */
+}
+
+#task-list li:hover {
+    background-color: #f0f0f0; /* ホバー時に背景色を少し濃く */
+}
+
+/* チェックボックスのスタイル */
+.task-checkbox {
+    margin-right: 1rem; /* 右側に余白 */
+    transform: scale(1.2); /* チェックボックスを1.2倍に拡大 */
+}
+
+/* タスクテキストのスタイル */
+.task-text {
+    flex-grow: 1; /* テキスト部分を広げる */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+/* 完了したタスクのスタイル（取り消し線と色変更） */
+.task-text.completed {
+    text-decoration: line-through; /* 取り消し線を表示 */
+    color: #3F3; /* 文字色を緑に */
+}
+
+/* =========================
+   編集フォームのスタイル
+   ========================= */
+.edit-input {
+    flex-grow: 1; /* 入力欄を広げる */
+    padding: 0.5rem; /* 内側の余白 */
+    border: 1px solid #ccc; /* 枠線を薄いグレーに */
+    border-radius: 4px; /* 角を丸く */
+    font-size: 0.95rem; /* 文字サイズをやや小さめに */
+}
+
+/* 編集ボタンのスタイル */
+.edit-button {
+    background-color: #ffc107; /* 黄色 */
+    color: #333; /* 文字色を濃いグレーに */
+    margin-left: 0.5rem; /* 左側に余白 */
+}
+.edit-button:hover {
+    background-color: #e0a800; /* ホバー時に濃い黄色に */
+}
